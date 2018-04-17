@@ -39,4 +39,3 @@ describe "Operations" do
       match = methods.last
       expect(match).to include("?")
     end
-  end
