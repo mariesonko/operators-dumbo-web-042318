@@ -1,4 +1,4 @@
-require_relative '../lib/operations.rb'
+require_relative './spec_helper.rb'
 require './operations.rb'
 describe "Operations" do
   let(:file_contents) { File.read(File.join(File.dirname(__FILE__), '..', 'lib/operations.rb')) }
@@ -7,12 +7,12 @@ describe "Operations" do
     it 'returns true if speed is greater than 60' do
       answer = unsafe?(79)
       expect(answer).to eq(true)
-    end 
-    
+    end
+
     it 'returns true if speed is less than 40' do
       answer = unsafe?(35)
       expect(answer).to eq(true)
-    end 
+    end
 
     it 'returns false if the speed is between 40 and 60' do
       answer = unsafe?(50)
@@ -23,12 +23,12 @@ describe "Operations" do
     it 'returns true if speed is greater than 60' do
       answer = not_safe?(79)
       expect(answer).to eq(true)
-    end 
+    end
 
     it 'returns true if speed is less than 40' do
       answer = not_safe?(35)
       expect(answer).to eq(true)
-    end 
+    end
 
     it 'returns false if the speed is between 40 and 60' do
       answer = not_safe?(50)
@@ -41,4 +41,3 @@ describe "Operations" do
       expect(match).to include("?")
     end
   end
-
