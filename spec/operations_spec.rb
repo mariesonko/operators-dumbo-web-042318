@@ -1,4 +1,5 @@
-require_relative '../lib/operations.rb' 
+require_relative '../lib/operations.rb'
+require './operations.rb'
 describe "Operations" do
   let(:file_contents) { File.read(File.join(File.dirname(__FILE__), '..', 'lib/operations.rb')) }
 
@@ -41,5 +42,5 @@ describe "Operations" do
       expect(match).to include("?")
     end
   end
-  
+
 end
